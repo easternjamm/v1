@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import EventDashboard from "../../features/event/EventDashboard/EventDashboard";
+import NavBar from "../../features/nav/NavBar/NavBar";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <h1>Halcyon</h1>
+      <div className='App'>
+        <NavBar />
+        <EventDashboard />
       </div>
     );
   }
-  
 }
 
 export default App;
