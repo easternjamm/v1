@@ -40,9 +40,10 @@ class EventListItem extends Component {
           </span>
         </div>
         <div className='el-attendees'>
-          {event.attendees.map((attendee) => (
-            <EventListAttendee key={attendee.id} attendee={attendee} />
-          ))}
+          {event.attendees &&
+            event.attendees.map((attendee) => (
+              <EventListAttendee key={attendee.id} attendee={attendee} />
+            ))}
         </div>
         <div className='el-footer'>
           <span>{event.description}</span>
