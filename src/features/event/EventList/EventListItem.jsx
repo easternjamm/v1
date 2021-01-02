@@ -3,7 +3,7 @@ import EventListAttendee from "./EventListAttendee";
 
 class EventListItem extends Component {
   render() {
-    const { event } = this.props;
+    const { event, selectEvent, deleteEvent } = this.props;
     return (
       <div className='event-list-item'>
         <div className='el-header'>
@@ -47,7 +47,8 @@ class EventListItem extends Component {
         </div>
         <div className='el-footer'>
           <span>{event.description}</span>
-          <button>View</button>
+          <button onClick={() => selectEvent(event)}>View</button>
+          <button onClick={() => deleteEvent(event.id)}>Delete</button>
         </div>
       </div>
     );
